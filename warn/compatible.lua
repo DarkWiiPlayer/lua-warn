@@ -7,14 +7,11 @@ return function(...)
 		elseif ... == "@off" then
 			enabled = false
 		end
-  elseif ngx and ngx.log then
-    ngx.log(ngx.WARN, table.concat({...}, ' '))
 	elseif enabled then
     local prefix = WARN_PREFIX or function()
       local i = debug.getinfo(3)
       return "Lua warning ("..i.short_src..":"..i.currentline.."):"
     end
-    io.stderr:write(table.concat({prefix(), ...}, ' '))
-    io.stderr:write("\n")
+    io.stderr:write(table.concat({prefix(), ...}, ' '), "\n")
 	end
 end
