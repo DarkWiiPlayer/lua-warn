@@ -20,11 +20,5 @@ Differences from vanilla warn (only applies below version 5.4)
 - File name and line number are part of the output message
 - The global function `WARN_PREFIX` can be used to customize this prefix
 
-The submodule `warn.extend` provides extensions for common runtimes.
-Currently only nginx is supported (pull requests are welcome!)
-These extensions work regardless of whether vanilla `warn` is used and can also
-be used for 5.4. Please note that requiring `warn.extend` **will** require
-`warn` and install its function globally when it doesn't exist.
-
 Also please note that this obviously doesn't add the `-W` flag to the Lua
 interpreter.

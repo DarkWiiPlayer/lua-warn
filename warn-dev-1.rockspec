@@ -14,7 +14,5 @@ build = {
    modules = {
      warn = 'warn.lua';
 	  ["warn.compatible"] = "warn/compatible.lua";
-     ["warn.extend"] = 'warn/extend.lua';
-     ["warn.extend.nginx"] = 'warn/extend/nginx.lua';
    }
 }
