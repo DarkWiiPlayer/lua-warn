@@ -15,6 +15,10 @@ Usage:
 	warn("@on")
 	warn("Hello", "World")
 
+Alternatively, libraries can optionally use this feature locally with
+
+	local warn = warn or require 'warn.compatible'
+
 Differences from vanilla warn (only applies below version 5.4)
 
 - File name and line number are part of the output message
