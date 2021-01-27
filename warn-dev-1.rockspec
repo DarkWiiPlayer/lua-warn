@@ -1,18 +1,19 @@
 package = "warn"
 version = "dev-1"
 source = {
-   url = "git+https://github.com/darkwiiplayer/lua-warn.git";
+	url = "git+https://github.com/darkwiiplayer/lua-warn.git";
 }
 
 description = {
-   homepage = "https://github.com/darkwiiplayer/lua-warn",
-   license = "Public Domain";
+	homepage = "https://github.com/darkwiiplayer/lua-warn",
+	license = "Public Domain";
 }
 
 build = {
-   type = "builtin",
-   modules = {
-     warn = 'warn.lua';
-	  ["warn.compatible"] = "warn/compatible.lua";
-   }
+	type = "builtin",
+	modules = {
+		["warn"] = 'warn.lua';
+		["warn.compatible"] = "warn/compatible.lua";
+		["warn.maybe"] = "warn/maybe.lua";
+	}
 }

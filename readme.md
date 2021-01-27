@@ -8,6 +8,8 @@ This library adds this functionality to older versionf of Lua.
 
 It can safely be required in Lua 5.4, in which case it simply does nothing.
 
+---
+
 Usage:
 
 	require 'warn' -- On Lua 5.4+ this does absolutely nothing
@@ -18,6 +20,10 @@ Usage:
 Alternatively, libraries can optionally use this feature locally with
 
 	local warn = warn or require 'warn.compatible'
+
+Or use this wrapper to use warn only if it's available as a global
+
+	local warn = require 'warn.maybe'
 
 Differences from vanilla warn (only applies below version 5.4)
 
