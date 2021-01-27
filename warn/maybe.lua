@@ -1,3 +1,3 @@
 return function(...)
-	if warn then warn(...)
+	return warn and warn(...)
 end
