@@ -25,6 +25,17 @@ Or use this wrapper to use warn only if it's available as a global
 
 	local warn = require 'warn.maybe'
 
+---
+
+To run Lua with warnings enabled, require the `w` module:
+
+	lua -lw file_with_warnings.lua
+
+Unlike the `-W` flag, this also works on older versions and requires warn if
+there's no global warn available.
+
+---
+
 Differences from vanilla warn (only applies below version 5.4)
 
 - File name and line number are part of the output message

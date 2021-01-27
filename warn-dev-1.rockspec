@@ -15,5 +15,6 @@ build = {
 		["warn"] = 'warn.lua';
 		["warn.compatible"] = "warn/compatible.lua";
 		["warn.maybe"] = "warn/maybe.lua";
+		["w"] = "w.lua";
 	}
 }
