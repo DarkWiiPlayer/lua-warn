@@ -1,5 +1,13 @@
 local enabled = false
 
+local write if io then
+	function write(...)
+		return io.stderr:write()
+	end
+else
+	write = print
+end
+
 return function(...)
 	if select('#', ...) == 1 and (...):byte()==64 then
 		if ... == "@on" then
@@ -12,6 +20,6 @@ return function(...)
 			local i = debug.getinfo(3)
 			return "Lua warning ("..i.short_src..":"..i.currentline.."):"
 		end
-		io.stderr:write(table.concat({prefix(), ...}, ' '), "\n")
+		write(table.concat({prefix(), ...}, ' '), "\n")
 	end
 end
