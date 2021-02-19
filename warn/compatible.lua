@@ -2,7 +2,7 @@ local enabled = false
 
 local write if io then
 	function write(...)
-		return io.stderr:write()
+		return io.stderr:write(...)
 	end
 else
 	write = print
